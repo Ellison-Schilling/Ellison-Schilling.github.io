@@ -15,6 +15,7 @@ header {
 header h1 {
     margin: 0;
     font-size: 2em;
+    color: #333; /* Dark color for header text */
 }
 
 nav ul {
@@ -29,12 +30,13 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: black;
+    color: #333; /* Dark color for nav links */
     font-size: 1.2em;
 }
 
 nav ul li a:hover {
     text-decoration: underline;
+    color: #007bff; /* Blue color on hover */
 }
 
 main {
@@ -63,6 +65,7 @@ footer {
 
 #skills li {
     margin-bottom: 10px;
+    color: #333; /* Dark color for skills list */
 }
 
 /* About section styles */
@@ -81,6 +84,7 @@ footer {
 
 #about h2 {
     margin-bottom: 10px;
+    color: #333; /* Dark color for section headings */
 }
 
 #about p {
@@ -99,11 +103,12 @@ footer {
 
 #projects ul li h3 {
     margin-bottom: 10px;
+    color: #333; /* Dark color for project titles */
 }
 
 #projects ul li a {
     text-decoration: none;
-    color: black;
+    color: #007bff; /* Blue color for project links */
     font-size: 1.2em;
 }
 
