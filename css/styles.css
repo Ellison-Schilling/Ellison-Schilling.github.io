@@ -59,24 +59,35 @@ footer {
     font-size: 1.2em;
     margin-bottom: 20px;
     transition: transform 0.3s ease;
+    background-color: #f0f0f0;
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .home-link:hover {
     transform: scale(1.1);
+    background-color: #e0e0e0;
 }
 
 /* Project section styles */
+#projects ul {
+    list-style-type: none;
+    padding: 0;
+}
+
 #projects ul li {
     display: flex;
     align-items: center;
     margin-bottom: 30px;
+    border: 2px solid black;
+    padding: 10px;
 }
 
 #projects ul li img {
-    width: 200px;
+    max-width: 300px;
     height: auto;
     margin-right: 20px;
-    border: 2px solid black;
 }
 
 #projects ul li h3 {
