@@ -145,3 +145,22 @@ footer {
         flex-direction: column;
     }
 }
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+#about img {
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+#projects img {
+    margin-top: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+}
