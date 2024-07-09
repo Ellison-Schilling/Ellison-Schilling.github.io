@@ -1,11 +1,11 @@
 /* General styles */
 body {
-    font-family: 'Times New Roman', serif;
+    font-family: 'Arial', sans-serif;
     line-height: 1.6;
     margin: 0;
     padding: 0;
     background-color: #f8f9fa;
-    color: #2a2a2a;
+    color: #333;
 }
 
 header {
@@ -19,7 +19,7 @@ header {
 header h1 {
     margin: 0;
     font-size: 2em;
-    color: #006400;
+    color: #007bff;
 }
 
 main {
@@ -28,7 +28,7 @@ main {
 }
 
 footer {
-    background-color: #2a2a2a;
+    background-color: #333;
     color: white;
     text-align: center;
     padding: 10px;
@@ -45,24 +45,10 @@ footer {
 #skills ul {
     list-style-type: none;
     padding: 0;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
 }
 
 #skills li {
-    background-color: #e6f0e6;
-    color: #004d00;
-    padding: 8px 15px;
-    border-radius: 20px;
-    display: inline-block;
     margin-bottom: 10px;
-    font-size: 0.9em;
-    transition: background-color 0.3s ease;
-}
-
-#skills li:hover {
-    background-color: #d1e6d1;
 }
 
 /* About section styles */
@@ -77,13 +63,13 @@ footer {
     width: 200px;
     height: auto;
     margin-right: 20px;
-    border: 2px solid #006400;
+    border: 2px solid #007bff;
     border-radius: 50%;
 }
 
 #about h2 {
     margin-bottom: 10px;
-    color: #006400;
+    color: #007bff;
     width: 100%;
 }
 
@@ -104,19 +90,18 @@ footer {
 
 #projects ul li h3 {
     margin-bottom: 10px;
-    color: #006400;
+    color: #007bff;
 }
 
 #projects ul li a {
     text-decoration: none;
-    color: #008000;
+    color: #007bff;
     font-size: 1.2em;
     transition: color 0.3s ease;
 }
 
 #projects ul li a:hover {
     text-decoration: underline;
-    color: #004d00;
 }
 
 /* Hamburger Menu Styles */
@@ -133,7 +118,7 @@ footer {
     width: 25px;
     height: 3px;
     margin: 5px auto;
-    background-color: #2a2a2a;
+    background-color: #333;
     transition: all 0.3s ease-in-out;
 }
 
@@ -160,7 +145,7 @@ footer {
 }
 
 .mobile-nav ul li a {
-    color: #2a2a2a;
+    color: #333;
     text-decoration: none;
     font-size: 1.2em;
 }
@@ -200,8 +185,8 @@ footer {
 }
 
 .project-section h2 {
-    color: #006400;
-    border-bottom: 2px solid #006400;
+    color: #007bff;
+    border-bottom: 2px solid #007bff;
     padding-bottom: 10px;
     margin-bottom: 15px;
 }
@@ -209,36 +194,4 @@ footer {
 .project-section p {
     text-align: justify;
     line-height: 1.6;
-}
-
-/* Common styles for section headers */
-#education h2, #skills h2 {
-    color: #006400;
-    border-bottom: 2px solid #006400;
-    padding-bottom: 10px;
-    margin-bottom: 20px;
-    font-size: 1.8em;
-}
-
-/* Education section styles */
-#education {
-    margin-bottom: 30px;
-}
-
-.education-item {
-    margin-bottom: 20px;
-}
-
-.education-item h3 {
-    margin-bottom: 5px;
-    color: #004d00;
-}
-
-.education-item p {
-    margin: 5px 0;
-    color: #4d4d4d;
-}
-
-.education-item p strong {
-    color: #2a2a2a;
 }
