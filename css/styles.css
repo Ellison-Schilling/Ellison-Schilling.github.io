@@ -39,9 +39,19 @@ footer {
     width: 100%;
 }
 
-/* Skills section styles */
-#skills {
+/* Skills and Education section styles */
+#skills, #education {
     margin-bottom: 30px;
+    background-color: #f8f9fa; /* Add background color for contrast */
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add shadow for contrast */
+}
+
+#skills h2, #education h2 {
+    color: #007bff;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
 }
 
 #skills ul {
@@ -51,6 +61,14 @@ footer {
 
 #skills li {
     margin-bottom: 10px;
+}
+
+#education .education-item {
+    margin-bottom: 20px;
+}
+
+#education .education-item h3 {
+    margin-bottom: 5px;
 }
 
 /* About section styles */
@@ -106,11 +124,18 @@ footer {
     color: #007bff;
     font-size: 1.2em;
     transition: color 0.3s ease;
+    background-color: #e0e0e0; /* Grey bubble background */
+    padding: 10px 20px;
+    border-radius: 20px; /* Rounded edges */
+    display: inline-block;
+    margin-right: 10px;
+    margin-bottom: 10px;
 }
 
 #projects ul li a:hover {
-    text-decoration: underline;
-    color: #0056b3; /* Darker blue for contrast */
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #007bff;
 }
 
 /* Hamburger Menu Styles */
