@@ -131,6 +131,19 @@ footer {
     background-color: #007bff;
 }
 
+/* Project paragraphs */
+.project-section p {
+    text-indent: 20px;
+    margin-bottom: 20px;
+}
+
+.project-section h2 {
+    color: #007bff;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
 /* Hamburger Menu Styles */
 .menu-toggle {
     position: absolute;
