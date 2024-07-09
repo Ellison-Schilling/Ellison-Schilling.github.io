@@ -179,3 +179,19 @@ footer {
         margin-bottom: 20px;
     }
 }
+
+.project-section {
+    margin-bottom: 30px;
+}
+
+.project-section h2 {
+    color: #007bff;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+.project-section p {
+    text-align: justify;
+    line-height: 1.6;
+}
