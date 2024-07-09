@@ -8,14 +8,23 @@
 </head>
 <body>
     <header>
-        <h1><a href="index.html" class="home-link"> Home</a></h1>
+        <h1>Anagram Web Game</h1>
+        <nav>
+            <div class="dropdown">
+                <button class="dropbtn">Menu</button>
+                <div class="dropdown-content">
+                    <a href="index.html">Home</a>
+                    <a href="project1.html">Rabbit In The Maze</a>
+                    <a href="project3.html">ACP Controle Time Brevets</a>
+                </div>
+            </div>
+        </nav>
     </header>
 
     <main>
         <section id="project-details">
-            <h2>Anagram Web Game</h2>
             <img src="images/AnnagramGame.png" alt="Screenshot of Anagram Web Game" style="width:100%;">
-            <p>This is a simple webpage game in which a user is prompted with a list of words and a jumble of letters with which to make the words. In order to win the user must type three words from the list that can be made using the letters provided in the jumble. When the user enters a word, the program will let the user know if the input was correct and if the user has won the game.There is no submit button as submits are done after each key press. If the user has typed a word from the list that can not be made with the letters then then a message will appear letting them know. If the user has typed a word not on the list or one already caught (in other words an invalid word) then a corresponding message will appear. If the user typed a correct word then if it is not the final one needed it will appear at the bottom with the others already found, else the user will be redirected to the success page. The game is built using AJAX, flask, Javascript, JQuery, and python.  </p>
+            <p>This is a simple webpage game in which a user is prompted with a list of words and a jumble of letters with which to make the words. In order to win the user must type three words from the list that can be made using the letters provided in the jumble. When the user enters a word, the program will let the user know if the input was correct and if the user has won the game. There is no submit button as submits are done after each key press. If the user has typed a word from the list that can not be made with the letters then a message will appear letting them know. If the user has typed a word not on the list or one already caught (in other words an invalid word) then a corresponding message will appear. If the user typed a correct word then if it is not the final one needed it will appear at the bottom with the others already found, else the user will be redirected to the success page. The game is built using AJAX, flask, Javascript, JQuery, and python.</p>
             <p><a href="https://github.com/Ellison-Schilling/Annagram-Web-Game" target="_blank">View on GitHub</a></p>
         </section>
     </main>
