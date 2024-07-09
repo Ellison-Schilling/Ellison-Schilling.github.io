@@ -8,7 +8,7 @@
 </head>
 <body>
     <header>
-        <h1>Annagram Web Game Project</h1>
+        <h1>Anagram Web Game</h1>
         <div class="menu-toggle" id="mobile-menu">
             <span class="bar"></span>
             <span class="bar"></span>
@@ -17,6 +17,8 @@
         <nav class="mobile-nav">
             <ul>
                 <li><a href="index.html">Home</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="contact.html">Contact</a></li>
                 <li><a href="project1.html">Rabbit In The Maze</a></li>
                 <li><a href="project2.html">Anagram Web Game</a></li>
                 <li><a href="project3.html">ACP Controle Time Brevets</a></li>
@@ -26,8 +28,29 @@
 
     <main>
         <section id="project-details">
-            <img src="images/AnnagramGame.png" alt="Screenshot of Anagram Web Game" style="width:50%;">
-            <p>This is a simple webpage game in which a user is prompted with a list of words and a jumble of letters with which to make the words. In order to win the user must type three words from the list that can be made using the letters provided in the jumble. When the user enters a word, the program will let the user know if the input was correct and if the user has won the game. There is no submit button as submits are done after each key press. If the user has typed a word from the list that can not be made with the letters then a message will appear letting them know. If the user has typed a word not on the list or one already caught (in other words an invalid word) then a corresponding message will appear. If the user typed a correct word then if it is not the final one needed it will appear at the bottom with the others already found, else the user will be redirected to the success page. The game is built using AJAX, flask, Javascript, JQuery, and python.</p>
+            <img src="images/AnnagramGame.png" alt="Screenshot of Anagram Web Game" style="width:100%;">
+            
+            <div class="project-section">
+                <h2>Explanation</h2>
+                <p>
+                    The Anagram Web Game is a simple yet engaging webpage game where users are presented with a list of words and a jumble of letters. The objective is to form three words from the list using the provided letters. The game processes user input in real-time, providing immediate feedback after each keystroke. Correct words are displayed at the bottom of the screen, and the game concludes when three valid words are found, redirecting the user to a success page.
+                </p>
+            </div>
+
+            <div class="project-section">
+                <h2>Inspiration</h2>
+                <p>
+                    The inspiration for this project came from a desire to create an interactive, educational game that enhances vocabulary and problem-solving skills. Anagrams have long been a popular word puzzle, and I wanted to bring this classic concept into a modern, web-based format. The real-time feedback mechanism was inspired by the need for an engaging user experience that keeps players motivated and informed throughout the gameplay.
+                </p>
+            </div>
+
+            <div class="project-section">
+                <h2>Reflection</h2>
+                <p>
+                    Developing the Anagram Web Game was an excellent opportunity to deepen my understanding of web technologies and user interaction design. One of the main challenges was implementing the real-time word validation system, which required careful consideration of both front-end and back-end processes. This project significantly improved my skills in AJAX, Flask, JavaScript, and jQuery. It also taught me valuable lessons about creating intuitive user interfaces and managing game state in a web environment. Looking back, I'm proud of creating a game that is both fun and educational, demonstrating the potential of web technologies in interactive learning experiences.
+                </p>
+            </div>
+
             <p><a href="https://github.com/Ellison-Schilling/Annagram-Web-Game" target="_blank">View on GitHub</a></p>
         </section>
     </main>
