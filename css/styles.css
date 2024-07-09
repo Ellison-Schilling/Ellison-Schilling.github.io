@@ -45,10 +45,24 @@ footer {
 #skills ul {
     list-style-type: none;
     padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
 #skills li {
+    background-color: #e9ecef;
+    color: #495057;
+    padding: 8px 15px;
+    border-radius: 20px;
+    display: inline-block;
     margin-bottom: 10px;
+    font-size: 0.9em;
+    transition: background-color 0.3s ease;
+}
+
+#skills li:hover {
+    background-color: #dee2e6;
 }
 
 /* About section styles */
@@ -203,34 +217,6 @@ footer {
     padding-bottom: 10px;
     margin-bottom: 20px;
     font-size: 1.8em;
-}
-
-/* Skills section styles */
-#skills {
-    margin-bottom: 30px;
-}
-
-#skills ul {
-    list-style-type: none;
-    padding: 0;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-}
-
-#skills li {
-    background-color: #e9ecef;
-    color: #495057;
-    padding: 8px 15px;
-    border-radius: 20px;
-    display: inline-block;
-    margin-bottom: 10px;
-    font-size: 0.9em;
-    transition: background-color 0.3s ease;
-}
-
-#skills li:hover {
-    background-color: #dee2e6;
 }
 
 /* Education section styles */
