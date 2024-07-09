@@ -39,27 +39,27 @@ footer {
     width: 100%;
 }
 
-/* Skills and Education section styles */
-#skills, #education {
+/* Skills, Education, and Projects section styles */
+#skills, #education, #projects {
     margin-bottom: 30px;
     background-color: #f8f9fa; /* Add background color for contrast */
     padding: 20px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add shadow for contrast */
 }
 
-#skills h2, #education h2 {
+#skills h2, #education h2, #projects h2 {
     color: #007bff;
     border-bottom: 2px solid #007bff;
     padding-bottom: 10px;
     margin-bottom: 15px;
 }
 
-#skills ul {
+#skills ul, #projects ul {
     list-style-type: none;
     padding: 0;
 }
 
-#skills li {
+#skills li, #projects li {
     margin-bottom: 10px;
 }
 
@@ -108,20 +108,13 @@ footer {
 }
 
 #projects ul li {
-    margin-bottom: 30px;
-    background-color: #f8f9fa; /* Add background color for contrast */
-    padding: 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add shadow for contrast */
-}
-
-#projects ul li h3 {
     margin-bottom: 10px;
-    color: #007bff;
+    display: inline-block;
 }
 
 #projects ul li a {
     text-decoration: none;
-    color: #007bff;
+    color: #333;
     font-size: 1.2em;
     transition: color 0.3s ease;
     background-color: #e0e0e0; /* Grey bubble background */
@@ -212,20 +205,4 @@ footer {
         margin-right: 0;
         margin-bottom: 20px;
     }
-}
-
-.project-section {
-    margin-bottom: 30px;
-}
-
-.project-section h2 {
-    color: #007bff;
-    border-bottom: 2px solid #007bff;
-    padding-bottom: 10px;
-    margin-bottom: 15px;
-}
-
-.project-section p {
-    text-align: justify;
-    line-height: 1.6;
 }
