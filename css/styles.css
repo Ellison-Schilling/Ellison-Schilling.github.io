@@ -9,7 +9,7 @@ body {
 }
 
 header {
-    background-color: #ffffff;
+    background-color: #f0f0f0;
     padding: 20px;
     text-align: left;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
@@ -59,12 +59,19 @@ footer {
     width: 100%;
 }
 
-/* Skills, Education, and Projects section styles */
-#skills, #education, #projects {
+/* Section styles with hover effects */
+#about, #education, #skills, #projects {
     margin-bottom: 30px;
     background-color: #f8f9fa;
     padding: 20px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+#about:hover, #education:hover, #skills:hover, #projects:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: #f0f0f0;
 }
 
 #skills h2, #education h2, #projects h2 {
@@ -95,11 +102,7 @@ footer {
 #about {
     display: flex;
     align-items: center;
-    margin-bottom: 30px;
     flex-wrap: wrap;
-    background-color: #f8f9fa;
-    padding: 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .profile-image {
@@ -122,11 +125,6 @@ footer {
 }
 
 /* Project section styles */
-#projects ul {
-    list-style-type: none;
-    padding: 0;
-}
-
 #projects ul li {
     margin-bottom: 10px;
     display: inline-block;
