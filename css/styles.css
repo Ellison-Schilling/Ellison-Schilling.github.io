@@ -12,21 +12,41 @@ header {
     background-color: #ffffff;
     padding: 20px;
     text-align: left;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Increased shadow for more contrast */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     position: relative;
+    border-bottom: 2px solid #005cbf;
 }
 
 header h1 {
     margin: 0;
-    font-size: 2em;
-    color: #007bff;
+    font-size: 2.2em;
+    color: #005cbf;
+    padding-bottom: 10px;
+    display: inline-block;
+    position: relative;
+}
+
+header h1::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background-color: #005cbf;
+    transform: scaleX(0.7);
+    transition: transform 0.3s ease;
+}
+
+header h1:hover::after {
+    transform: scaleX(1);
 }
 
 main {
     padding: 20px;
-    margin-bottom: 60px; /* Space for footer */
-    background-color: #ffffff; /* Add background color for contrast */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add shadow for contrast */
+    margin-bottom: 60px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 footer {
@@ -42,9 +62,9 @@ footer {
 /* Skills, Education, and Projects section styles */
 #skills, #education, #projects {
     margin-bottom: 30px;
-    background-color: #f8f9fa; /* Add background color for contrast */
+    background-color: #f8f9fa;
     padding: 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add shadow for contrast */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 #skills h2, #education h2, #projects h2 {
@@ -77,9 +97,9 @@ footer {
     align-items: center;
     margin-bottom: 30px;
     flex-wrap: wrap;
-    background-color: #f8f9fa; /* Add background color for contrast */
+    background-color: #f8f9fa;
     padding: 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add shadow for contrast */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .profile-image {
@@ -117,9 +137,9 @@ footer {
     color: #333;
     font-size: 1.2em;
     transition: color 0.3s ease;
-    background-color: #e0e0e0; /* Grey bubble background */
+    background-color: #e0e0e0;
     padding: 10px 20px;
-    border-radius: 20px; /* Rounded edges */
+    border-radius: 20px;
     display: inline-block;
     margin-right: 10px;
     margin-bottom: 10px;
@@ -169,7 +189,7 @@ footer {
     width: 60%;
     height: 100%;
     background-color: #fff;
-    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2); /* Increased shadow for more contrast */
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
     transition: right 0.3s ease-in-out;
     z-index: 999;
 }
