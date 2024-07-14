@@ -238,7 +238,6 @@ footer {
     }
 }
 
-/* Carousel Styles */
 .carousel {
     position: relative;
     width: 100%;
@@ -255,29 +254,8 @@ footer {
     box-sizing: border-box;
 }
 
-.carousel-item img,
-.carousel-item video {
+.carousel-item img {
     width: 100%;
     height: auto;
     display: block;
-}
-
-.carousel-control {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    cursor: pointer;
-    font-size: 18px;
-}
-
-.carousel-control.prev {
-    left: 10px;
-}
-
-.carousel-control.next {
-    right: 10px;
 }
