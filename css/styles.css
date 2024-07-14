@@ -523,3 +523,32 @@ footer {
       background: rgba(0, 0, 0, 0.1);
     }
   }
+
+  /* Add these styles to your existing CSS file */
+
+.mobile-nav ul li.has-submenu {
+    position: relative;
+}
+
+.mobile-nav ul li.has-submenu > a::after {
+    content: '▼';
+    font-size: 0.7em;
+    margin-left: 5px;
+}
+
+.mobile-nav ul li.has-submenu.open > a::after {
+    content: '▲';
+}
+
+.mobile-nav ul li .submenu {
+    display: none;
+    padding-left: 20px;
+}
+
+.mobile-nav ul li.open .submenu {
+    display: block;
+}
+
+.submenu-toggle {
+    cursor: pointer;
+}
