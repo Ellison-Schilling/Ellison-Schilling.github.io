@@ -237,6 +237,246 @@ footer {
         margin-bottom: 20px;
     }
 }
+
+/* General styles */
+body {
+    font-family: 'Times New Roman', Times, serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+header {
+    background-color: #f0f0f0;
+    padding: 20px;
+    text-align: left;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    position: relative;
+    border-bottom: 2px solid #005cbf;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.2em;
+    color: #005cbf;
+    padding-bottom: 10px;
+    display: inline-block;
+    position: relative;
+}
+
+header h1::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background-color: #005cbf;
+    transform: scaleX(0.7);
+    transition: transform 0.3s ease;
+}
+
+header h1:hover::after {
+    transform: scaleX(1);
+}
+
+main {
+    padding: 20px;
+    margin-bottom: 60px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Section styles with hover effects */
+#about, #education, #skills, #projects {
+    margin-bottom: 30px;
+    background-color: #f8f9fa;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+#about:hover, #education:hover, #skills:hover, #projects:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: #f0f0f0;
+}
+
+#skills h2, #education h2, #projects h2 {
+    color: #007bff;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+#skills ul, #projects ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#skills li, #projects li {
+    margin-bottom: 10px;
+}
+
+#education .education-item {
+    margin-bottom: 20px;
+}
+
+#education .education-item h3 {
+    margin-bottom: 5px;
+}
+
+/* About section styles */
+#about {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.profile-image {
+    width: 200px;
+    height: auto;
+    margin-right: 20px;
+    border: 2px solid #007bff;
+    border-radius: 50%;
+}
+
+#about h2 {
+    margin-bottom: 10px;
+    color: #007bff;
+    width: 100%;
+}
+
+#about p {
+    flex: 1;
+    min-width: 300px;
+}
+
+/* Project section styles */
+#projects ul li {
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
+#projects ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1.2em;
+    transition: color 0.3s ease;
+    background-color: #e0e0e0;
+    padding: 10px 20px;
+    border-radius: 20px;
+    display: inline-block;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+#projects ul li a:hover {
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #007bff;
+}
+
+/* Project paragraphs */
+.project-section p {
+    text-indent: 20px;
+    margin-bottom: 20px;
+}
+
+.project-section h2 {
+    color: #007bff;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+/* Hamburger Menu Styles */
+.menu-toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: #333;
+    transition: all 0.3s ease-in-out;
+}
+
+.mobile-nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 60%;
+    height: 100%;
+    background-color: #fff;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+    transition: right 0.3s ease-in-out;
+    z-index: 999;
+}
+
+.mobile-nav ul {
+    list-style: none;
+    padding: 50px 0 0 0;
+    margin: 0;
+}
+
+.mobile-nav ul li {
+    padding: 10px 20px;
+}
+
+.mobile-nav ul li a {
+    color: #333;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+/* When menu is active */
+.menu-active .mobile-nav {
+    right: 0;
+}
+
+.menu-active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.menu-active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    #about {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .profile-image {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+}
 .carousel-container {
     position: relative;
     width: 100%;
