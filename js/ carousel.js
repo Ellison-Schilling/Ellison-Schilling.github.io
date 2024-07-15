@@ -1,3 +1,4 @@
+
 document.addEventListener('DOMContentLoaded', function() {
     const carousel = document.querySelector('.carousel-inner');
     const items = carousel.querySelectorAll('.carousel-item');
@@ -6,11 +7,6 @@ document.addEventListener('DOMContentLoaded', function() {
     let currentIndex = 0;
 
     function showItem(index) {
-        // Remove 'active' class from all items
-        items.forEach(item => item.classList.remove('active'));
-        // Add 'active' class to the current item
-        items[index].classList.add('active');
-        // Move the carousel to show the current item
         carousel.style.transform = `translateX(-${index * 100}%)`;
     }
 
@@ -26,7 +22,4 @@ document.addEventListener('DOMContentLoaded', function() {
 
     nextBtn.addEventListener('click', showNext);
     prevBtn.addEventListener('click', showPrev);
-
-    // Initialize the carousel
-    showItem(currentIndex);
 });

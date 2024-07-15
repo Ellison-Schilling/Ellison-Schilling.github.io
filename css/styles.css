@@ -124,27 +124,42 @@ footer {
     min-width: 300px;
 }
 
-/* Projects section styles */
-.projects-section {
-    padding: 0;
-    margin: 0;
+/* Project section styles */
+#projects ul li {
+    margin-bottom: 10px;
+    display: inline-block;
 }
 
-.projects-section strong {
-    font-weight: bold;
-    display: block;
-    margin-bottom: 5px;
+#projects ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1.2em;
+    transition: color 0.3s ease;
+    background-color: #e0e0e0;
+    padding: 10px 20px;
+    border-radius: 20px;
+    display: inline-block;
+    margin-right: 10px;
+    margin-bottom: 10px;
 }
 
-.projects-section .project-list {
-    padding-left: 20px;
-    margin: 0;
+#projects ul li a:hover {
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #007bff;
 }
 
-.projects-section .project-list li {
-    list-style-type: disc;
-    padding-left: 20px;
-    text-indent: -10px;
+/* Project paragraphs */
+.project-section p {
+    text-indent: 20px;
+    margin-bottom: 20px;
+}
+
+.project-section h2 {
+    color: #007bff;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
 }
 
 /* Hamburger Menu Styles */
