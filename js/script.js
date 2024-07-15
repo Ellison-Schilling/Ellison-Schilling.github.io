@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 document.addEventListener('DOMContentLoaded', function() {
+<<<<<<< HEAD
     const carousel = document.querySelector('.carousel');
     const slides = Array.from(carousel.querySelectorAll('.slide'));
     const prevButton = document.querySelector('.prev');
@@ -41,3 +42,28 @@ document.addEventListener('DOMContentLoaded', function() {
     setInterval(nextSlide, 5000);
 });
 
+=======
+    const carousel = document.querySelector('.carousel-inner');
+    const items = carousel.querySelectorAll('.carousel-item');
+    const prevBtn = document.querySelector('.carousel-control.prev');
+    const nextBtn = document.querySelector('.carousel-control.next');
+    let currentIndex = 0;
+
+    function showItem(index) {
+        carousel.style.transform = `translateX(-${index * 100}%)`;
+    }
+
+    function showNext() {
+        currentIndex = (currentIndex + 1) % items.length;
+        showItem(currentIndex);
+    }
+
+    function showPrev() {
+        currentIndex = (currentIndex - 1 + items.length) % items.length;
+        showItem(currentIndex);
+    }
+
+    nextBtn.addEventListener('click', showNext);
+    prevBtn.addEventListener('click', showPrev);
+});
+>>>>>>> parent of 92130c8 (Fixed bug hopefullt)
