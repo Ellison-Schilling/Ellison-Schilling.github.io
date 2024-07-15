@@ -1,33 +1,25 @@
+
 document.addEventListener('DOMContentLoaded', function() {
-    const carousel = document.querySelector('.carousel');
-    const slides = Array.from(carousel.querySelectorAll('.slide'));
-    const prevButton = carousel.querySelector('.prev');
-    const nextButton = carousel.querySelector('.next');
-    let currentSlide = 0;
+    const carousel = document.querySelector('.carousel-inner');
+    const items = carousel.querySelectorAll('.carousel-item');
+    const prevBtn = document.querySelector('.carousel-control.prev');
+    const nextBtn = document.querySelector('.carousel-control.next');
+    let currentIndex = 0;
 
-    function updateCarousel() {
-        slides.forEach((slide, index) => {
-            if (index === currentSlide) {
-                slide.classList.add('current-slide');
-            } else {
-                slide.classList.remove('current-slide');
-            }
-        });
+    function showItem(index) {
+        carousel.style.transform = `translateX(-${index * 100}%)`;
     }
 
-    function nextSlide() {
-        currentSlide = (currentSlide + 1) % slides.length;
-        updateCarousel();
+    function showNext() {
+        currentIndex = (currentIndex + 1) % items.length;
+        showItem(currentIndex);
     }
 
-    function prevSlide() {
-        currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-        updateCarousel();
+    function showPrev() {
+        currentIndex = (currentIndex - 1 + items.length) % items.length;
+        showItem(currentIndex);
     }
 
-    nextButton.addEventListener('click', nextSlide);
-    prevButton.addEventListener('click', prevSlide);
-
-    // Optional: Auto-advance slides every 5 seconds
-    setInterval(nextSlide, 5000);
+    nextBtn.addEventListener('click', showNext);
+    prevBtn.addEventListener('click', showPrev);
 });

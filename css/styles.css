@@ -144,102 +144,140 @@ footer {
 }
 
 #projects ul li a:hover {
-    color: #007bff;
-    background-color: #d0d0d0;
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #007bff;
 }
 
-#projects .carousel-container {
-    position: relative;
-    overflow: hidden;
+/* Project paragraphs */
+.project-section p {
+    text-indent: 20px;
     margin-bottom: 20px;
 }
 
-#projects .carousel {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
+.project-section h2 {
+    color: #007bff;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
 }
 
-#projects .slide {
-    min-width: 100%;
-    transition: opacity 0.5s ease-in-out;
-}
-
-#projects .slide img {
-    width: 100%;
-    border: 3px solid #007bff;
-    border-radius: 10px;
-}
-
-.carousel-button {
+/* Hamburger Menu Styles */
+.menu-toggle {
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    padding: 10px;
+    top: 20px;
+    right: 20px;
     cursor: pointer;
-    z-index: 10;
-    border-radius: 50%;
+    z-index: 1000;
 }
 
-.carousel-button.prev {
-    left: 10px;
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: #333;
+    transition: all 0.3s ease-in-out;
 }
 
-.carousel-button.next {
-    right: 10px;
+.mobile-nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 60%;
+    height: 100%;
+    background-color: #fff;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+    transition: right 0.3s ease-in-out;
+    z-index: 999;
 }
 
-.carousel-button:hover {
-    background-color: rgba(0, 0, 0, 0.8);
+.mobile-nav ul {
+    list-style: none;
+    padding: 50px 0 0 0;
+    margin: 0;
 }
 
-.current-slide {
-    opacity: 1;
+.mobile-nav ul li {
+    padding: 10px 20px;
 }
 
-.slide:not(.current-slide) {
+.mobile-nav ul li a {
+    color: #333;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+/* When menu is active */
+.menu-active .mobile-nav {
+    right: 0;
+}
+
+.menu-active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.menu-active .bar:nth-child(2) {
     opacity: 0;
-    pointer-events: none;
 }
 
-/* Responsive Styles */
-@media (max-width: 768px) {
-    header h1 {
-        font-size: 1.8em;
-    }
+.menu-active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
 
+/* Responsive adjustments */
+@media (max-width: 768px) {
     #about {
         flex-direction: column;
-        align-items: center;
         text-align: center;
     }
 
     .profile-image {
+        margin-right: 0;
         margin-bottom: 20px;
-    }
-
-    #projects ul li a {
-        font-size: 1em;
-        padding: 5px 10px;
-    }
-
-    .carousel-button {
-        padding: 5px;
     }
 }
 
-@media (max-width: 480px) {
-    header h1 {
-        font-size: 1.5em;
-    }
+/* Carousel Styles */
+.carousel {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
 
-    #about p {
-        font-size: 0.9em;
-    }
+.carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease;
+}
 
-    #projects ul li a {
-        font-size: 0.9em;
-    }
+.carousel-item {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+.carousel-item img,
+.carousel-item video {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.carousel-control.prev {
+    left: 10px;
+}
+
+.carousel-control.next {
+    right: 10px;
 }
