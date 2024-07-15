@@ -16,7 +16,7 @@ This portfolio website showcases Ellison Schilling/Largent's background, project
 
 ## Projects
 
-The Projects section features several key projects developed by Ellison Schilling/Largent, including:
+The Projects section features several key projects developed or worked on by Ellison Schilling/Largent, including:
 
 - **Rabbit In The Maze**
   - A Unity game where the player controls a rabbit navigating through randomly generated mazes.
