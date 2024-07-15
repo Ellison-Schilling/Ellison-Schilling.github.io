@@ -281,3 +281,20 @@ footer {
 .carousel-control.next {
     right: 10px;
 }
+
+.dropdown-title {
+    display: block;
+    padding: 10px 20px;
+    color: #333;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    padding-left: 20px;
+}
+
+.dropdown-content.active {
+    display: block;
+}
