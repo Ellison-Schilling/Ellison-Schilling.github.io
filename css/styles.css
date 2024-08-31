@@ -302,26 +302,39 @@ footer {
     background-color: #0056b3;
     font-weight: bold;
 }
-
 /* Media Queries for Responsiveness */
-@media (max-width: 1200px) {
-    .image-container {
-        max-width: 60%;
-        padding-top: 33.75%; /* 16:9 aspect ratio for 60% width */
-    }
-}
-
-@media (max-width: 992px) {
+@media (min-width: 1400px) {
     .image-container {
         max-width: 70%;
         padding-top: 39.375%; /* 16:9 aspect ratio for 70% width */
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1399px) {
+    .image-container {
+        max-width: 75%;
+        padding-top: 42.1875%; /* 16:9 aspect ratio for 75% width */
+    }
+}
+
+@media (max-width: 1200px) {
     .image-container {
         max-width: 80%;
         padding-top: 45%; /* 16:9 aspect ratio for 80% width */
+    }
+}
+
+@media (max-width: 992px) {
+    .image-container {
+        max-width: 85%;
+        padding-top: 47.8125%; /* 16:9 aspect ratio for 85% width */
+    }
+}
+
+@media (max-width: 768px) {
+    .image-container {
+        max-width: 90%;
+        padding-top: 50.625%; /* 16:9 aspect ratio for 90% width */
     }
 }
 
