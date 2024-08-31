@@ -253,7 +253,6 @@ footer {
     max-width: 50%;
     padding-top: 28.125%; /* 16:9 aspect ratio for half width */
     overflow: hidden;
-    background-color: #f0f0f0;
     border: 1px solid #ddd;
 }
 
