@@ -27,21 +27,17 @@
 
     <main>
         <section id="project-details">
-            <div class="carousel">
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img src="images/RabbitInTheMaze.png" alt="Screenshot 1 of Rabbit In The Maze game">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="images/RabbitInTheMaze1.png" alt="Screenshot 2 of Rabbit In The Maze game">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="images/RabbitInTheMaze2.png" alt="Screenshot 3 of Rabbit In The Maze game">
-                    </div>
-                    </div>
+            <div class="image-gallery">
+                <div class="image-container">
+                    <img src="images/RabbitInTheMaze.png" alt="Screenshot 1 of Rabbit In The Maze game" class="active">
+                    <img src="images/RabbitInTheMaze1.png" alt="Screenshot 2 of Rabbit In The Maze game">
+                    <img src="images/RabbitInTheMaze2.png" alt="Screenshot 3 of Rabbit In The Maze game">
                 </div>
-                <button class="carousel-control prev">&lt;</button>
-                <button class="carousel-control next">&gt;</button>
+                <div class="image-nav">
+                    <button class="image-nav-btn active" data-index="0">1</button>
+                    <button class="image-nav-btn" data-index="1">2</button>
+                    <button class="image-nav-btn" data-index="2">3</button>
+                </div>
             </div>
 
             <div class="project-section">
@@ -54,7 +50,7 @@
             <div class="project-section">
                 <h2>Inspiration</h2>
                 <p>
-                    The inspiration for Rabbit In The Maze came from classic maze games and the desire to create an engaging, procedurally generated experience. We wanted to combine the charm of a cute protagonist (the rabbit) with the challenge of navigating through unpredictable environments. The idea of increasing difficulty was inspired by the concept of growth and learning, mirroring the journey of a player as they become more skilled at the game.
+                    The inspiration for Rabbit In The Maze came from classic maze games and the desire to create an engaging, procedurally generated experience. We wanted to combine the charm of an Alice in Wonderland style game with the challenge of navigating through unpredictable environments. The idea of increasing difficulty was inspired by the concept of growth and learning, mirroring the journey of a player as they become more skilled at the game.
                 </p>
             </div>
 
@@ -74,6 +70,6 @@
     </footer>
 
     <script src="js/script.js"></script>
-    <script src="js/carousel.js"></script>
+    <script src="js/imageGallery.js"></script>
 </body>
 </html>
