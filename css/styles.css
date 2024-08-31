@@ -237,7 +237,6 @@ footer {
         margin-bottom: 20px;
     }
 }
-
 /* Image Gallery Styles */
 .image-gallery {
     max-width: 100%;
@@ -253,7 +252,8 @@ footer {
     max-width: 50%;
     padding-top: 28.125%; /* 16:9 aspect ratio for half width */
     overflow: hidden;
-    border: 1px solid #ddd;
+    background-color: transparent; /* Remove background color */
+    border: none; /* Remove border */
 }
 
 .image-container img {
