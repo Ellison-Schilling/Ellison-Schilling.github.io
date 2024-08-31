@@ -242,14 +242,18 @@ footer {
 .image-gallery {
     max-width: 100%;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .image-container {
     position: relative;
     width: 100%;
-    padding-top: 56.25%; /* 16:9 aspect ratio */
+    max-width: 50%;
+    padding-top: 28.125%; /* 16:9 aspect ratio for half width */
     overflow: hidden;
-    background-color: #f0f0f0; /* Light gray background */
+    background-color: #f0f0f0;
     border: 1px solid #ddd;
 }
 
@@ -259,7 +263,7 @@ footer {
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: contain; /* Changed from cover to contain */
+    object-fit: contain;
     display: none;
     transition: opacity 0.3s ease;
 }
@@ -298,4 +302,33 @@ footer {
 .image-nav-btn.active {
     background-color: #0056b3;
     font-weight: bold;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1200px) {
+    .image-container {
+        max-width: 60%;
+        padding-top: 33.75%; /* 16:9 aspect ratio for 60% width */
+    }
+}
+
+@media (max-width: 992px) {
+    .image-container {
+        max-width: 70%;
+        padding-top: 39.375%; /* 16:9 aspect ratio for 70% width */
+    }
+}
+
+@media (max-width: 768px) {
+    .image-container {
+        max-width: 80%;
+        padding-top: 45%; /* 16:9 aspect ratio for 80% width */
+    }
+}
+
+@media (max-width: 576px) {
+    .image-container {
+        max-width: 100%;
+        padding-top: 56.25%; /* 16:9 aspect ratio for full width */
+    }
 }

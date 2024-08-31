@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function showImage(index) {
         images.forEach((img, i) => {
-            if (i === index) {
+            if (i == index) {
                 img.classList.add('active');
                 img.style.display = 'block';
             } else {
