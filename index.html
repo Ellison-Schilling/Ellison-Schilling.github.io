@@ -1,69 +1,552 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ellison Schilling/Largent - Homepage</title>
-    <link rel="stylesheet" href="css/styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ellison Largent Portfolio</title>
+  <style>
+    /* CSS Variables for easy color management */
+:root {
+  --nav-bg: #141d25;         /* Dark nav background */
+  --nav-text: #ecf0f1;       /* Light nav text */
+  --hero-bg: #0f171f;        /* Dark hero background */
+  --hero-text: #ecf0f1;      /* Hero text */
+  --accent-color: #2980b9;   /* Accent color */
+  --content-bg: #ffffff;     /* White background for main sections */
+  --content-text: #333333;   /* Dark content text */
+  --card-bg: #ffffff;        /* White background for cards */
+  --card-shadow: rgba(0, 0, 0, 0.1);
+  --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Global Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-family);
+  line-height: 1.6;
+  background-color: var(--content-bg);
+  color: var(--content-text);
+}
+
+a {
+  text-decoration: none;
+  color: var(--accent-color);
+}
+
+/* Navigation */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: var(--nav-bg);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  z-index: 100;
+}
+
+nav .nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--nav-text);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+nav li {
+  margin-left: 1.5rem;
+}
+
+nav a {
+  color: var(--nav-text);
+  font-size: 1rem;
+}
+
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger span {
+  height: 3px;
+  width: 25px;
+  background: var(--nav-text);
+  margin: 4px 0;
+  transition: 0.4s;
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(135deg, #040507 10%, #155783 100%);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+  color: var(--hero-text);
+  height: calc(100vh - 70px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 2rem;
+  margin-top: 70px;
+  position: relative;
+  overflow: hidden;
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.hero-content {
+  display: flex;
+  align-items: center;
+  max-width: 1200px;
+  width: 100%;
+  gap: 3rem;
+  position: relative;
+  z-index: 10;
+}
+
+.hero-text {
+  flex: 1;
+  color: var(--hero-text);
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.hero .cta-btn {
+  background: var(--hero-text);
+  color: var(--accent-color);
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 25px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.hero .cta-btn:hover {
+  background: var(--accent-color);
+  color: var(--hero-text);
+}
+
+/* Profile Picture Styling */
+.hero-profile-container {
+  flex: 0 0 250px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-profile {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid var(--hero-text);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.3), 0 0 40px rgba(255, 255, 255, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hero-profile:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.5), 0 0 50px rgba(255, 255, 255, 0.3);
+}
+
+/* Main Content Sections */
+section {
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+section h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  color: var(--content-text);
+}
+
+/* About Section */
+#about p {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+/* Skills Section */
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.skill-tag {
+  background: var(--accent-color);
+  color: white;
+  padding: 0.3rem 0.7rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  margin: 0.2rem;
+  transition: transform 0.3s ease;
+  white-space: nowrap;
+}
+
+.skill-tag:hover {
+  transform: translateY(-3px);
+}
+
+/* Projects Section */
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.project-card {
+  background: var(--card-bg);
+  border-radius: 8px;
+  box-shadow: 0 2px 6px var(--card-shadow);
+  padding: 1.5rem;
+  transition: transform 0.3s;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+.project-card h3 {
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  color: var(--accent-color);
+}
+
+.project-card p {
+  font-size: 0.95rem;
+  color: var(--content-text);
+}
+
+.project-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: var(--nav-bg);
+  color: var(--nav-text);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  nav .nav-container {
+    flex-wrap: wrap;
+  }
+
+  nav ul {
+    flex-direction: column;
+    width: 100%;
+    display: none;
+  }
+
+  nav ul.show {
+    display: flex;
+  }
+
+  nav li {
+    margin: 1rem 0;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .hero-profile-container {
+    flex: 0 0 200px;
+  }
+
+  .hero-profile {
+    width: 200px;
+    height: 200px;
+  }
+  
+}
+  /* Experience & Education */
+  .timeline {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .timeline-item {
+      background: var(--card-bg);
+      padding: 1rem 1.5rem;
+      margin-bottom: 1rem;
+      border-left: 4px solid var(--accent-color);
+      box-shadow: 0 2px 6px var(--card-shadow);
+    }
+
+    .timeline-item h3 {
+      margin-bottom: 0.25rem;
+      color: var(--accent-color);
+    }
+
+    .timeline-item span {
+      font-size: 0.9rem;
+      color: #777;
+    }
+
+    .timeline-item p {
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+    }
+    
+ /* Contact Section */
+ #contact {
+      text-align: center;
+    }
+
+    #contact a.contact-link {
+      display: inline-block;
+      margin: 0.5rem;
+      font-size: 1.1rem;
+      color: var(--accent-color);
+      border: 1px solid var(--accent-color);
+      padding: 0.5rem 1rem;
+      border-radius: 25px;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    #contact a.contact-link:hover {
+      background: var(--accent-color);
+      color: var(--content-bg);
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>Ellison Largent's Website</h1>
-        <div class="menu-toggle" id="mobile-menu">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
+  <!-- Navigation -->
+  <nav>
+    <div class="nav-container">
+      <div class="logo">Ellison Largent</div>
+      <div class="hamburger" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <ul id="nav-links">
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+    <header id="hero" class="hero">
+    <div class="hero-content">
+      <div class="hero-profile-container">
+        <img src="/Assets/profile-picture.jpg" alt="Ellison Largent Profile Picture" class="hero-profile" loading="lazy">
+      </div>
+      <div class="hero-text">
+        <h1>Hi, I'm Ellison Largent</h1>
+        <p>Computer Science Senior | Software Engineer | Problem Solver</p>
+        <button class="cta-btn" onclick="scrollToSection('about')">Learn More</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- About Section -->
+  <section id="about">
+    <h2>About Me</h2>
+    <p>
+      I am a dedicated Computer Science senior at the University of Oregon with a passion for creating innovative technological solutions. Proficient in full-stack web development, game design, and solving complex programming challenges, I bring a blend of technical expertise and creative problem-solving to every project.
+    </p>
+  </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+      <h2>Technical Skills</h2>
+      <div class="skills-container">
+        <span class="skill-tag">Python</span>
+        <span class="skill-tag">JavaScript</span>
+        <span class="skill-tag">React</span>
+        <span class="skill-tag">Flask</span>
+        <span class="skill-tag">C#</span>
+        <span class="skill-tag">Unity</span>
+        <span class="skill-tag">MongoDB</span>
+        <span class="skill-tag">SQLAlchemy</span>
+        <span class="skill-tag">HTML/CSS</span>
+        <span class="skill-tag">C & C++</span>
+      </div>
+    </section>
+
+  <!-- Projects Section -->
+  <!-- Projects Section: Enhanced with more details and potential links -->
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="projects-container">
+      <!-- Let's Cook Web App -->
+      <div class="project-card">
+        <img class="project-image" src="/Assets/Let'sCook/login.png" alt="Let's Cook Web App - Recipe management platform" loading="lazy">
+        <h3>Let's Cook Web App</h3>
+        <p>
+          Full-stack web application enabling recipe discovery and meal planning. Implemented user authentication, recipe management, and shopping list generation using a modern tech stack.
+        </p>
+        <div class="project-links">
+          <a href="https://github.com/lilylogan/cs422_project/blob/main/README.md" target="_blank">View on GitHub</a>
         </div>
-        <nav class="mobile-nav">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="project1.html">Rabbit In The Maze</a></li>
-                <li><a href="project2.html">Anagram Web Game</a></li>
-                <li><a href="project3.html">ACP Controle Time Brevets</a></li>
-            </ul>
-        </nav>
-    </header>
+      </div>
+      <!-- Rabbit in the Maze Game -->
+      <div class="project-card">
+        <img class="project-image" src="Assets/RabbitInTheMaze.png" alt="Rabbit in the Maze Game Screenshot">
+        <h3>Rabbit in the Maze Game</h3>
+        <p>
+          Developed a Unity game where a rabbit navigates procedurally generated mazes. Implemented progressive difficulty, pathfinding, and obstacle avoidance using C#.
+        </p>
+        <div class="project-links">
+          <a href="https://github.com/Ellison-Schilling/RabbitInTheMaze" target="_blank">View on GitHub</a>
+        </div>
+      </div>
+      <!-- Web Anagram Game -->
+      <div class="project-card">
+        <img class="project-image" src="Assets/AnnagramGame.png" alt="Web Anagram Game Screenshot">
+        <h3>Web Anagram Game</h3>
+        <p>
+          Created an interactive web-based anagram game with a Flask backend, leveraging AJAX and MongoDB for real-time user input processing and feedback.
+        </p>
+        <div class="project-links">
+          <a href="https://github.com/Ellison-Schilling/Annagram-Web-Game" target="_blank">View on GitHub</a>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <main>
-        <section id="about">
-            <img src="images/Ellison.png" alt="Ellison Schilling" class="profile-image">
-            <p>Hey there! I'm Ellison Largent, a computer science senior at the University of Oregon with a focus on software engineering and a minor in Business Administration. I grew up in the charming town of Dallas, Oregon, where my love for tech and problem-solving first took root. When I'm not busy coding in C++, Python, or JavaScript, you might find me volunteering in my community or dreaming up ways to make the world a bit better through technology. I'm a firm believer in the power of hard work and academic excellence, but I also see the benefits of knowing how to have fun – whether it's creating a Unity game or whipping up a latte in my free time. I'm always excited to take on new challenges and learn something new, so feel free to reach out if you want to chat about code, coffee, or anything in between!</p>
-        </section>
+  <!-- Experience Section -->
+  <section id="experience">
+    <h2>Experience</h2>
+    <div class="timeline">
+      <!-- Learning Assistant -->
+      <div class="timeline-item">
+        <h3>Learning Assistant, CS 111 &amp; CS 110</h3>
+        <span>University of Oregon | Sep 2024 – Present</span>
+        <p>
+          Assisted students in labs and projects for web programming courses and collaborated with professors and fellow assistants to provide effective support.
+        </p>
+      </div>
+      <!-- Linear Algebra Paper Marker -->
+      <div class="timeline-item">
+        <h3>Linear Algebra Paper Marker</h3>
+        <span>University of Oregon | Jan 2025 – Present</span>
+        <p>
+          Supported professors by grading assignments and providing constructive feedback to students.
+        </p>
+      </div>
+    </div>
+  </section>
 
-        <section id="education">
-            <h2>Education</h2>
-            <div class="education-item">
-                <h3>University of Oregon</h3>
-                <p><strong>Bachelor of Science in Computer Science</strong></p>
-                <p>Minor in Business Administration</p>
-                <p>September 2021 - June 2025</p>
-                <p>GPA: 3.80</p>
-            </div>
-        </section>
+  <!-- Education Section -->
+  <section id="education">
+    <h2>Education</h2>
+    <div class="timeline">
+      <div class="timeline-item">
+        <h3>Bachelor of Science in Computer Science</h3>
+        <span>University of Oregon</span>
+        <p>
+          Minor in Business Administration. Recognized with the University of Oregon Presidential Scholarship (2021 – Present).
+        </p>
+      </div>
+    </div>
+  </section>
 
-        <section id="skills">
-            <h2>Technical Skills</h2>
-            <ul>
-                <li>Programming Languages: C, C++, C#, Python, JavaScript, HTML, CSS, SQL, MongoDB, JQuery</li>
-                <li>Web Technologies: Docker, Flask</li>
-            </ul>
-        </section>
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Get in touch via email, phone, or connect on LinkedIn and GitHub.</p>
+    <div>
+      <a class="contact-link" href="mailto:ellison.largent@gmail.com">Email Me</a>
+      <a class="contact-link" href="tel:+19717010377">Call Me</a>
+      <a class="contact-link" href="https://linkedin.com/in/ellisonlargent" target="_blank">LinkedIn</a>
+      <a class="contact-link" href="https://github.com/Ellison-Schilling" target="_blank">GitHub</a>
+    </div>
+  </section>
 
-        <section id="projects">
-            <h2>Project Quick Links</h2>
-            <ul>
-                <li><a href="project1.html">Rabbit In The Maze Project</a></li>
-                <li><a href="project2.html">Anagram Web Game Project</a></li>
-                <li><a href="project3.html">ACP Controle Times Project</a></li>
-            </ul>
-        </section>
-    </main>
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Ellison Largent. All Rights Reserved.</p>
+  </footer>
 
-    <footer>
-        <p>&copy; 2024 Ellison Schilling/Largent. All rights reserved.</p>
-    </footer>
+  <!-- Scripts -->
+  <script>
+    // Smooth scroll function
+    function scrollToSection(id) {
+      const element = document.getElementById(id);
+      if (element) {
+        window.scrollTo({
+          top: element.offsetTop - 60, // Offset for fixed nav
+          behavior: 'smooth'
+        });
+      }
+    }
 
-    <script src="js/script.js"></script>
+    // Toggle hamburger menu on mobile
+    function toggleMenu() {
+      const navLinks = document.getElementById("nav-links");
+      const hamburger = document.querySelector(".hamburger");
+      navLinks.classList.toggle("show");
+      hamburger.classList.toggle("open");
+    }
+
+    // Smooth scroll for nav links
+    document.querySelectorAll('nav a').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href').substring(1);
+        scrollToSection(targetId);
+        // Hide nav on mobile after clicking
+        if (window.innerWidth < 768) {
+          toggleMenu();
+        }
+      });
+    });
+  </script>
 </body>
 </html>
