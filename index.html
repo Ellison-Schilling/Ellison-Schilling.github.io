@@ -498,7 +498,7 @@ footer {
       </div>
       <div class="hero-text">
         <h1>Hi, I'm Ellison Largent</h1>
-        <p>Computer Science Senior | Software Engineer | Problem Solver</p>
+        <p>Computer Science Student | Software Engineer | Problem Solver</p>
         <button class="cta-btn" onclick="scrollToSection('about')">Learn More</button>
       </div>
     </div>
@@ -539,7 +539,7 @@ footer {
     <h2>Projects</h2>
     <div class="projects-container">
       <!-- Let's Cook Web App -->
-      <div class="project-card">
+      <div class="project-card" data-project="lets-cook">
         <img class="project-image" src="/Assets/Let'sCook/login.png" alt="Let's Cook Web App - Recipe management platform" loading="lazy">
         <h3>Let's Cook Web App</h3>
         <p>
@@ -548,6 +548,41 @@ footer {
         <div class="project-links">
           <a href="https://github.com/lilylogan/cs422_project/blob/main/README.md" target="_blank">View on GitHub</a>
         </div>
+        <span class="hint">(Double-click to expand details)</span>
+      <!-- Expanded Content (Hidden by Default) -->
+      <div class="project-details" id="lets-cook-details">
+        <!-- Carousel for Images -->
+        <div class="carousel">
+          <div class="carousel-inner">
+            <img src="Assets/Let'sCook/home.png" alt="Let's cook home page">
+            <img src="Assets/Let'sCook/liked.png" alt="Let's cook liked page">
+            <img src="Assets/Let'sCook/emptyPlanner.png" alt="Let's empty planner page">
+            <img src="Assets/Let'sCook/planner.png" alt="Let's cook filled planner page">
+            <img src="Assets/Let'sCook/recipe.png" alt="Let's cook recipe pop up">
+            <img src="Assets/Let'sCook/settings.png" alt="Let's cook settings page">
+
+          </div>
+          <button class="carousel-prev">&#10094;</button>
+          <button class="carousel-next">&#10095;</button>
+        </div>
+        <!-- Explanation, Inspiration, Reflection Sections -->
+        <div class="project-sections">
+          <div class="section">
+            <h4>Explanation</h4>
+            <p> Let's cook is a web app in which users can find new recipes or look through their favorites in order to streamline the meal planning process. Also features an accompanying shopping list for the meal plan where all the ingredients for recipes are stored in a grocery list.
+            </p>
+          </div>
+          <div class="section">
+            <h4>Inspiration</h4>
+            <p> I made this project along with three hours for anyone who struggles to pick what to make for their meals, and want an all in one solution for meal planning. The goal of this project was to create a replacement for cookbooks, and recipe sites that can overwhelm users. </p>
+          </div>
+          <div class="section">
+            <h4>Reflection</h4>
+            <p> My team and I developed this web app using docker, flask, react, mysql, sqlalchemy, and a lot of teamwork. Throughout the project developement we had regular meetings utilizing agile methodology where we wrote up our ConOps and user requirements, planning out in detail how we would execute a larger scale project. We cleaned a recipe dataset and used that as our basis with the hopes that one day we might have the time to get back together and work on a feature to allow users to add their own recipes. This project taught me a lot about time management, working with others on a project, version control and the importance of branching, as well as how much goes into web applications. 
+            </p>
+          </div>
+        </div>
+      </div>
       </div>
       <!-- Rabbit in the Maze Game -->
     <div class="project-card" data-project="rabbit-maze">
@@ -575,28 +610,58 @@ footer {
         <div class="project-sections">
           <div class="section">
             <h4>Explanation</h4>
-            <p>Details about how the game works, including the algorithms used for maze generation and pathfinding.</p>
+            <p>Rabbit In The Maze is a Unity game developed collaboratively. In this game, players control a rabbit trying to escape randomly generated mazes of increasing difficulty. The objective is to find the key to unlock the exit in each level. The game features progressively challenging mazes, requiring players to navigate through complex paths and avoid obstacles.
+            </p>
           </div>
           <div class="section">
             <h4>Inspiration</h4>
-            <p>What inspired the creation of this game, including any personal or academic motivations.</p>
+            <p>The inspiration for Rabbit In The Maze came from classic maze games and the desire to create an engaging, procedurally generated experience. We wanted to combine the charm of an Alice in Wonderland style game with the challenge of navigating through unpredictable environments. The idea of increasing difficulty was inspired by the concept of growth and learning, mirroring the journey of a player as they become more skilled at the game.</p>
           </div>
           <div class="section">
             <h4>Reflection</h4>
-            <p>What I learned from this project, challenges faced, and how I overcame them.</p>
+            <p>Developing Rabbit In The Maze was an enriching experience that taught us valuable lessons in game design, procedural generation, and collaborative development. One of the main challenges we faced was balancing the difficulty progression to ensure the game remained challenging yet fair. This project enhanced our skills in Unity development, algorithm design for maze generation, and user experience considerations. Looking back, we're proud of creating an engaging game that offers a unique experience with each playthrough, thanks to its randomized nature.</p>
           </div>
         </div>
       </div>
     </div>
       <!-- Web Anagram Game -->
-      <div class="project-card">
-        <img class="project-image" src="Assets/AnnagramGame.png" alt="Web Anagram Game Screenshot">
+      <div class="project-card" data-project="annagram">
+        <img class="project-image" src="Assets/Annagram/blank.png" alt="Web Anagram Game Screenshot">
         <h3>Web Anagram Game</h3>
         <p>
           Created an interactive web-based anagram game with a Flask backend, leveraging AJAX and MongoDB for real-time user input processing and feedback.
         </p>
         <div class="project-links">
           <a href="https://github.com/Ellison-Schilling/Annagram-Web-Game" target="_blank">View on GitHub</a>
+        </div>
+        <span class="hint">(Double-click to expand details)</span>
+      <!-- Expanded Content (Hidden by Default) -->
+      <div class="project-details" id="annagram-details">
+        <!-- Carousel for Images -->
+        <div class="carousel">
+          <div class="carousel-inner">
+            <img src="Assets/Annagram/inProgress.png" alt="In progress game screen">
+            <img src="Assets/Annagram/win.png" alt="Win screen for web anagram game">
+          </div>
+          <button class="carousel-prev">&#10094;</button>
+          <button class="carousel-next">&#10095;</button>
+        </div>
+        <!-- Explanation, Inspiration, Reflection Sections -->
+        <div class="project-sections">
+          <div class="section">
+            <h4>Explanation</h4>
+            <p>The Anagram Web Game is a simple yet engaging webpage game where users are presented with a list of words and a jumble of letters. The objective is to form three words from the list using the provided letters. The game processes user input in real-time, providing immediate feedback after each keystroke. Correct words are displayed at the bottom of the screen, and the game concludes when three valid words are found, redirecting the user to a success page.
+            </p>
+          </div>
+          <div class="section">
+            <h4>Inspiration</h4>
+            <p>The inspiration for this project came from a desire to create an interactive, educational game that enhances vocabulary and problem-solving skills. Anagrams have long been a popular word puzzle, and I wanted to bring this classic concept into a modern, web-based format. The real-time feedback mechanism was inspired by the need for an engaging user experience that keeps players motivated and informed throughout the gameplay.</p>
+          </div>
+          <div class="section">
+            <h4>Reflection</h4>
+            <p>Developing the Anagram Web Game was an excellent opportunity to deepen my understanding of web technologies and user interaction design. One of the main challenges was implementing the real-time word validation system, which required careful consideration of both front-end and back-end processes. This project significantly improved my skills in AJAX, Flask, JavaScript, and jQuery. It also taught me valuable lessons about creating intuitive user interfaces and managing game state in a web environment. Looking back, I'm proud of creating a game that is both fun and educational, demonstrating the potential of web technologies in interactive learning experiences.
+            </p>
+          </div>
         </div>
       </div>
     </div>
