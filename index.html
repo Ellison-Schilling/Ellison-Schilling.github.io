@@ -181,6 +181,50 @@ nav a {
   box-shadow: 0 0 30px rgba(255, 255, 255, 0.5), 0 0 50px rgba(255, 255, 255, 0.3);
 }
 
+/* Responsive Styles for Mobile */
+@media (max-width: 768px) {
+  /* Hero Section Adjustments */
+  .hero {
+    height: auto; /* Allow height to adjust based on content */
+    padding: 2rem 1rem; /* Reduce padding for smaller screens */
+  }
+
+  .hero-content {
+    flex-direction: column; /* Stack content vertically */
+    gap: 1.5rem; /* Reduce gap between elements */
+    text-align: center; /* Center align text */
+  }
+
+  .hero-text {
+    order: 2; /* Move text below the profile picture */
+  }
+
+  .hero-profile-container {
+    order: 1; /* Move profile picture above the text */
+    flex: 0 0 150px; /* Reduce size of profile picture container */
+  }
+
+  .hero-profile {
+    width: 150px; /* Smaller profile picture */
+    height: 150px;
+  }
+
+  .hero h1 {
+    font-size: 2rem; /* Smaller heading for mobile */
+    margin-bottom: 0.75rem;
+  }
+
+  .hero p {
+    font-size: 1rem; /* Smaller paragraph text for mobile */
+    margin-bottom: 1rem;
+  }
+
+  .hero .cta-btn {
+    font-size: 0.9rem; /* Smaller button text */
+    padding: 0.5rem 1rem; /* Smaller button padding */
+  }
+}
+
 /* Main Content Sections */
 section {
   padding: 4rem 2rem;
@@ -336,7 +380,7 @@ footer {
       margin-top: 0.5rem;
       font-size: 0.95rem;
     }
-    
+
  /* Contact Section */
  #contact {
       text-align: center;
@@ -357,6 +401,72 @@ footer {
       background: var(--accent-color);
       color: var(--content-bg);
     }
+
+    /* Project Details (Hidden by Default) */
+.project-details {
+  display: none;
+  margin-top: 1rem;
+}
+
+/* Carousel Styles */
+.carousel {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.carousel-inner {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.carousel-inner img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.carousel-prev,
+.carousel-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 0.5rem;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.carousel-prev {
+  left: 10px;
+}
+
+.carousel-next {
+  right: 10px;
+}
+
+/* Project Sections */
+.project-sections {
+  margin-top: 1.5rem;
+}
+
+.project-sections .section {
+  margin-bottom: 1.5rem;
+}
+
+.project-sections h4 {
+  margin-bottom: 0.5rem;
+  color: var(--accent-color);
+}
+
+.hint {
+  font-size: 0.8rem;
+  color: #777;
+  margin-left: 0.5rem;
+}
   </style>
 </head>
 <body>
@@ -411,11 +521,15 @@ footer {
         <span class="skill-tag">React</span>
         <span class="skill-tag">Flask</span>
         <span class="skill-tag">C#</span>
+        <span class="skill-tag">C & C++</span>
         <span class="skill-tag">Unity</span>
         <span class="skill-tag">MongoDB</span>
-        <span class="skill-tag">SQLAlchemy</span>
         <span class="skill-tag">HTML/CSS</span>
-        <span class="skill-tag">C & C++</span>
+        <span class="skill-tag">SQL/mySQL</span>
+        <span class="skill-tag">SQLAlchemy</span>
+        <span class="skill-tag">Agile Methodology</span>
+
+
       </div>
     </section>
 
@@ -436,16 +550,44 @@ footer {
         </div>
       </div>
       <!-- Rabbit in the Maze Game -->
-      <div class="project-card">
-        <img class="project-image" src="Assets/RabbitInTheMaze.png" alt="Rabbit in the Maze Game Screenshot">
-        <h3>Rabbit in the Maze Game</h3>
-        <p>
-          Developed a Unity game where a rabbit navigates procedurally generated mazes. Implemented progressive difficulty, pathfinding, and obstacle avoidance using C#.
-        </p>
-        <div class="project-links">
-          <a href="https://github.com/Ellison-Schilling/RabbitInTheMaze" target="_blank">View on GitHub</a>
+    <div class="project-card" data-project="rabbit-maze">
+      <img class="project-image" src="Assets/RabbitInTheMaze/titleScreen.png" alt="Rabbit in the Maze Game Screenshot">
+      <h3>Rabbit in the Maze Game</h3>
+      <p>
+        Developed a Unity game where a rabbit navigates procedurally generated mazes. Implemented progressive difficulty, pathfinding, and obstacle avoidance using C#.
+      </p>
+      <div class="project-links">
+        <a href="https://github.com/Ellison-Schilling/RabbitInTheMaze" target="_blank">View on GitHub</a>
+      </div>
+      <span class="hint">(Double-click to expand details)</span>
+      <!-- Expanded Content (Hidden by Default) -->
+      <div class="project-details" id="rabbit-maze-details">
+        <!-- Carousel for Images -->
+        <div class="carousel">
+          <div class="carousel-inner">
+            <img src="Assets/RabbitInTheMaze/inProgress.png" alt="Rabbit in the Maze Screenshot 2">
+            <img src="Assets/RabbitInTheMaze/lose.png" alt="Rabbit in the Maze Screenshot 3">
+          </div>
+          <button class="carousel-prev">&#10094;</button>
+          <button class="carousel-next">&#10095;</button>
+        </div>
+        <!-- Explanation, Inspiration, Reflection Sections -->
+        <div class="project-sections">
+          <div class="section">
+            <h4>Explanation</h4>
+            <p>Details about how the game works, including the algorithms used for maze generation and pathfinding.</p>
+          </div>
+          <div class="section">
+            <h4>Inspiration</h4>
+            <p>What inspired the creation of this game, including any personal or academic motivations.</p>
+          </div>
+          <div class="section">
+            <h4>Reflection</h4>
+            <p>What I learned from this project, challenges faced, and how I overcame them.</p>
+          </div>
         </div>
       </div>
+    </div>
       <!-- Web Anagram Game -->
       <div class="project-card">
         <img class="project-image" src="Assets/AnnagramGame.png" alt="Web Anagram Game Screenshot">
@@ -516,6 +658,40 @@ footer {
 
   <!-- Scripts -->
   <script>
+
+    // Expand/Collapse Project Details on Double-Click
+    document.querySelectorAll('.project-card').forEach(card => {
+      card.addEventListener('dblclick', (event) => {
+        // Toggle project details
+        const projectId = card.getAttribute('data-project');
+        const details = document.getElementById(`${projectId}-details`);
+        details.style.display = details.style.display === 'block' ? 'none' : 'block';
+      });
+    });
+
+    // Carousel Navigation
+    document.querySelectorAll('.carousel').forEach(carousel => {
+      const inner = carousel.querySelector('.carousel-inner');
+      const prevButton = carousel.querySelector('.carousel-prev');
+      const nextButton = carousel.querySelector('.carousel-next');
+      let currentIndex = 0;
+
+      prevButton.addEventListener('click', (event) => {
+        event.stopPropagation(); // Stop event from bubbling up
+        if (currentIndex > 0) {
+          currentIndex--;
+          inner.style.transform = `translateX(-${currentIndex * 100}%)`;
+        }
+      });
+
+      nextButton.addEventListener('click', (event) => {
+        event.stopPropagation(); // Stop event from bubbling up
+        if (currentIndex < inner.children.length - 1) {
+          currentIndex++;
+          inner.style.transform = `translateX(-${currentIndex * 100}%)`;
+        }
+      });
+    });
     // Smooth scroll function
     function scrollToSection(id) {
       const element = document.getElementById(id);
